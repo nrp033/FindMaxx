@@ -20,7 +20,7 @@ namespace FindMaxx
                    "2) Find Maximum Float Value\n" +
                    "3) Find Maximum String");
 
-                Console.WriteLine("\n\nEnter Your Choice : ");
+                Console.Write("\n\nEnter Your Choice : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,7 +37,7 @@ namespace FindMaxx
                         break;
 
                     case 3:
-                        string result3 = findMax.FindMaxString("Apple", "Peach", "Banana");
+                        string result3 = findMax.FindMaxString("Peach", "Apple",  "Banana");
                         Console.WriteLine("\nGreatest string among three is : " + result3);
                         break;
 
