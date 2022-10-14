@@ -37,7 +37,7 @@ namespace FindMaxx
                         break;
 
                     case 3:
-                        string result3 = findMax.FindMaxString( "Apple", "Peach", "Banana");
+                        string result3 = findMax.FindMaxString( "Apple",  "Banana","Peach");
                         Console.WriteLine("\nGreatest string among three is : " + result3);
                         break;
 
