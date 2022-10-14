@@ -44,5 +44,22 @@ namespace FindMaxx
             }
             return 0;
         }
+
+        internal string FindMaxString(string s1, string s2, string s3)
+        {
+            if (s1.CompareTo(s2) > 0 && s1.CompareTo(s3) > 0)
+            {
+                return s1;
+            }
+            if (s2.CompareTo(s1) > 0 && s2.CompareTo(s3) > 0)
+            {
+                return s2;
+            }
+            if (s3.CompareTo(s1) > 0 && s3.CompareTo(s2) > 0)
+            {
+                return s3;
+            }
+            return default;
+        }
     }
 }
