@@ -6,7 +6,7 @@
         {
             FindMax findMax = new FindMax();
 
-            int result = findMax.FindMaxInteger(380, 320, 5);
+            int result = findMax.FindMaxInteger(380, 412, 5);
 
             Console.WriteLine("Greatest number among three numbers is : " + result);
 
