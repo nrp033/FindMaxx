@@ -28,7 +28,7 @@
                         break;
 
                         case 2:
-                        float result1 = findMax.FindMaxFloat(322.3f,433.7f,183.2f);
+                        float result1 = findMax.FindMaxFloat(322.3f,433.7f,683.2f);
                         Console.WriteLine("\nGreatest number among three Float Numbers is :" + result1);
                         break;
 
