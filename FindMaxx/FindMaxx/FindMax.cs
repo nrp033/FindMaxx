@@ -26,5 +26,23 @@ namespace FindMaxx
             return 0;
 
         }
+
+        internal float FindMaxFloat(float Value1, float Value2, float Value3)
+        {
+
+            if (Value1.CompareTo(Value2) > 0 && Value1.CompareTo(Value3) > 0)
+            {
+                return Value1;
+            }
+            if (Value2.CompareTo(Value1) > 0 && Value2.CompareTo(Value3) > 0)
+            {
+                return Value2;
+            }
+            if (Value3.CompareTo(Value1) > 0 && Value3.CompareTo(Value2) > 0)
+            {
+                return Value3;
+            }
+            return 0;
+        }
     }
 }
