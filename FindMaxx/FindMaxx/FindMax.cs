@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace FindMaxx
 {
-    internal class FindMax
+    internal class FindMax<T> where T:IComparable
     {
-        public T FindMaxAll <T>(T First, T Second, T Third) where T:IComparable
+        private T First;
+        private T Second;
+        private T Third;
+
+        public FindMax(T a,T b,T c)
+        {
+            First = a;
+            Second = b;
+            Third = c;
+        }
+        public T FindMaxShow() 
         { 
 
             if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)

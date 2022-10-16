@@ -7,38 +7,41 @@ namespace FindMaxx
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\n\n---- Welcome to Generics Program ----");
 
-            Console.WriteLine("Welcome to Generics Program");
-            FindMax findMax = new FindMax();
             bool check = true;
+
 
 
             while (check)
             {
-                Console.Write("\n\nSelect The Option \n\n" +
-                   "1) Find Maximum Integer Value\n" +
-                   "2) Find Maximum Float Value\n" +
-                   "3) Find Maximum String");
-
-                Console.Write("\n\nEnter Your Choice : ");
+                //FindMax obj = new FindMax();
+                Console.WriteLine("Select Option:\n" +
+                    "1) Find Integer Maximum Number\n" +
+                    "2) Find Float Maximum Number\n" +
+                    "3) Find Maximum String\n\n\n");
+                Console.Write("\nEnter Your Choice :  ");
+                
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
-                      
+
 
                     case 1:
-                        int result = findMax.FindMaxAll(15, 100, 5);
-                        Console.WriteLine("\nGreatest number among three numbers is : " + result);
-                        break;
 
-                        case 2:
-                        float result1 = findMax.FindMaxAll(322.3f,433.7f,683.2f);
-                        Console.WriteLine("\nGreatest number among three Float Numbers is : " + result1);
+                        FindMax<int> obj = new FindMax<int>(22, 54, 62);
+                        int result = obj.FindMaxShow();
+                        Console.WriteLine("Greatest number among three numbers is :  " + result);
                         break;
-
+                    case 2:
+                        FindMax<float> objf = new FindMax<float>(22.6f,22.8f, 22.6f);
+                        float resultf = objf.FindMaxShow();
+                        Console.WriteLine("Greatest number among three float number is :  " + resultf);
+                        break;
                     case 3:
-                        string result3 = findMax.FindMaxAll( "Apple",  "Banana","Peach");
-                        Console.WriteLine("\nGreatest string among three is : " + result3);
+                        FindMax<string> objs = new FindMax<string>("Apple", "Peach", "Banana");
+                        string results = objs.FindMaxShow();
+                        Console.WriteLine("Greatest string among three string is :  " + results);
                         break;
 
 
@@ -46,8 +49,10 @@ namespace FindMaxx
                         check = !check;
                         break;
                 }
-
             }
+
+            Console.ReadKey();
+
         }
     }
 }
